@@ -1,4 +1,5 @@
 const express = require("express");
+const verify = require("../controllers/verifyToken");
 const router = express.Router();
 const {
   getTransactions,
@@ -8,9 +9,9 @@ const {
 
 router
   .route("/")
-  .get(getTransactions)
-  .post(addTransactions);
+  .get(verify, getTransactions)
+  .post(verify, addTransactions);
 
-router.route("/:id").delete(deleteTransactions);
+router.route("/:id").delete(verify, deleteTransactions);
 
 module.exports = router;

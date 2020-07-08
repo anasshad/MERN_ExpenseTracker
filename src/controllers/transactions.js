@@ -3,8 +3,9 @@ const Transaction = require("../models/Transaction");
 // @route GET /api/v1/transactions
 // @access Public
 exports.getTransactions = async (req, res, next) => {
+  console.log(req.user);
   try {
-    const transactions = await Transaction.find();
+    const transactions = await Transaction.find({ userId: req.user._id });
 
     return res.status(200).json({
       success: true,
@@ -23,8 +24,15 @@ exports.getTransactions = async (req, res, next) => {
 // @route POST /api/v1/transactions
 // @access Public
 exports.addTransactions = async (req, res, next) => {
+  console.log({
+    ...req.body,
+    userId: req.user._id
+  });
   try {
-    const transaction = await Transaction.create(req.body);
+    const transaction = await Transaction.create({
+      ...req.body,
+      userId: req.user._id
+    });
 
     return res.status(201).json({
       success: true,

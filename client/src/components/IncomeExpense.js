@@ -15,11 +15,11 @@ const IncomeExpense = () => {
   const expense = amount
     .filter(item => item < 0)
     .reduce((acc, item) => (acc += item), 0)
-    .toFixed(2)
+    .toFixed(2);
 
   return (
     <>
-      <Paper style={{ padding: "10px" }}>
+      <Paper style={{ padding: "10px", margin: "20px 0px" }}>
         <Grid container justify="space-evenly">
           <Grid item>
             <Typography variant="caption">Income</Typography>

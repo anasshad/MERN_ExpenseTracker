@@ -1,4 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap");
+
+body {
+  background-color: #25292e;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
 .App {
   font-family: sans-serif;
   text-align: center;
+}
+
+.Header {
+  width: 344px;
+  height: 84px;
+  left: 628px;
+  margin-top: 53px;
+
+  font-family: "IBM Plex Sans", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 42px;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.Container {
+  padding: 45px;
+  background: #ffffff;
+  border-radius: 5px;
+}
+
+.Component-Header {
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 34px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #25292e;
+}
+
+.Subheading {
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 25px;
+  /* identical to box height */
+  margin: 20px 0px;
+  color: #25292e;
+}
+
+.Button {
+  width: 209px;
+  height: 50px;
+  margin: 20px auto;
+
+  background: #25292e;
+  /* box-shadow: 0px 14px 17px rgba(0, 0, 0, 0.5); */
+  border-radius: 5px;
+
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+a.Button {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

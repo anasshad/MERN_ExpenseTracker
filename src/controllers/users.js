@@ -6,7 +6,14 @@ exports.register = async (req, res) => {
   const salt = bcrypt.genSaltSync(10);
   const hashedPassword = bcrypt.hashSync(req.body.password, salt);
   try {
-    const user = await User.create({
+    let user = await User.findOne({ email: req.body.email });
+    if (user) {
+      return res.status(409).json({
+        success: false,
+        error: "Email already registered"
+      });
+    }
+    user = await User.create({
       name: req.body.name,
       email: req.body.email,
       password: hashedPassword

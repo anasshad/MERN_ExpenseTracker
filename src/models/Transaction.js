@@ -10,6 +10,10 @@ const TransactionSchema = new mongoose.Schema({
     type: Number,
     required: [true, "Please add +ve or -ve number"]
   },
+  userId: {
+    type: String,
+    required: true
+  },
   createdAt: {
     type: Date,
     default: Date.now

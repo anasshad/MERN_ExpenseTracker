@@ -1,11 +1,5 @@
 import React, { useContext, useState } from "react";
-import {
-  Grid,
-  TextField,
-  Typography,
-  Button,
-  Divider
-} from "@material-ui/core";
+import { Grid, TextField, Typography } from "@material-ui/core";
 import { GlobalContext } from "../context/GlobalState";
 
 const AddTransaction = () => {
@@ -60,9 +54,8 @@ const AddTransaction = () => {
   const { addTransaction } = useContext(GlobalContext);
   return (
     <Grid container direction="column">
-      <Typography variant="h6">Add Transaction</Typography>
-      <Divider />
-      <br />
+      <div className="Subheading">Add Transaction</div>
+
       <Typography
         variant="caption"
         align="left"
@@ -101,9 +94,9 @@ const AddTransaction = () => {
         }
       />
       <br />
-      <Button variant="contained" color="primary" onClick={() => handleClick()}>
+      <button className="Button" onClick={() => handleClick()}>
         Add Transaction
-      </Button>
+      </button>
     </Grid>
   );
 };

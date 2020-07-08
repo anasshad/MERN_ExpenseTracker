@@ -1,8 +1,7 @@
 import React from "react";
-import { Typography } from "@material-ui/core";
 
 const Header = () => {
-  return <Typography variant="h4" gutterBottom >Expense Tracker</Typography>;
+  return <div className="Header">Expense Tracker</div>;
 };
 
 export default Header;
